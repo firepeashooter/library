@@ -1,3 +1,17 @@
 .title{
     color:red;
 }
+
+.header{
+    display:flex;
+    justify-content: center;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.book{
+    background-color: lightcoral;
+    height: 200px;
+    width: 200px;
+}
+
