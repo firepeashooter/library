@@ -20,11 +20,90 @@ function addBookToLibrary(title, author, pages, read) {
     myLibrary.push(book);
 }
 
-const myLibrary = [];
+bookContainer = document.querySelector(".book--container")
 
 
-addBookToLibrary("The Dark Tower", "Steven King", 579, true);
-addBookToLibrary("The Wastelands", "Steven King", 324, false);
+///A FUNCTION THAT DISPLAYS BOOK INFORMATION TO THE SCREEN
+function displayBooks(){
 
-console.log(myLibrary[0].info());
-console.log(myLibrary[1].info());
+
+    for (let i = 0; i < 3; i++){
+        //Create the book card
+        book = document.createElement("div");
+        book.classList.add("book")
+
+        //Add it to the book container
+        bookContainer.appendChild(book);
+
+
+        //Create layout for the book card
+        titleContainer = document.createElement("div");
+        titleContainer.classList.add("title--container");
+
+        info = document.createElement("div");
+        info.classList.add("info");
+
+        //Add layout divs
+        book.appendChild(titleContainer);
+        book.appendChild(info);
+
+
+        //Create the title
+        title = document.createElement("h2");
+        title.classList.add("title");
+        title.textContent = "Stephen King";
+
+
+        //Create the Author p tag
+        author = document.createElement("p");
+        authorName = document.createElement("span");
+        authorName.classList.add("subheading");
+        authorName.textContent = "Author: ";
+
+        author.appendChild(authorName);
+        author.appendChild(document.createTextNode("Author 1"));
+
+
+        //Create the pages p tag
+        pages = document.createElement("p");
+        pagesNum = document.createElement("span");
+        pagesNum.classList.add("subheading");
+        pagesNum.textContent = "Pages: ";
+
+        pages.appendChild(pagesNum);
+        pages.appendChild(document.createTextNode("757"));
+
+
+        //Create the read p tag
+        read = document.createElement("p");
+        readStatus = document.createElement("span");
+        readStatus.classList.add("subheading");
+        readStatus.textContent = "Read: ";
+
+        read.appendChild(readStatus);
+        read.appendChild(document.createTextNode("True"));
+
+
+
+
+        //Add the componenets
+        titleContainer.appendChild(title);
+        info.appendChild(author);
+        info.appendChild(pages);
+        info.appendChild(read);
+
+    }
+
+}
+
+displayBooks()
+
+// const myLibrary = [];
+
+
+
+// addBookToLibrary("The Dark Tower", "Steven King", 579, true);
+// addBookToLibrary("The Wastelands", "Steven King", 324, false);
+
+// console.log(myLibrary[0].info());
+// console.log(myLibrary[1].info());
