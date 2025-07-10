@@ -24,14 +24,18 @@ bookContainer = document.querySelector(".book--container")
 
 
 ///A FUNCTION THAT DISPLAYS BOOK INFORMATION TO THE SCREEN
-function displayBooks(){
+function displayBooks(library){
 
-    bookTitle = "Book Title";
-    bookAuthor = "Book Author";
-    bookPages = 69;
-    bookRead = true;
+    
 
-    for (let i = 0; i < 3; i++){
+    for (let i = 0; i < library.length; i++){
+
+        //Initializing the variables
+        bookTitle = library[i].title;
+        bookAuthor = library[i].author;
+        bookPages = library[i].pages;
+        bookRead = library[i].read;
+
         //Create the book card
         book = document.createElement("div");
         book.classList.add("book");
@@ -100,14 +104,13 @@ function displayBooks(){
 
 }
 
-displayBooks()
 
-// const myLibrary = [];
+//Create and add books to library
+const myLibrary = [];
+addBookToLibrary("The Dark Tower", "Steven King", 579, true);
+addBookToLibrary("The Wastelands", "Steven King", 324, false);
 
 
+//Display books to the bookshelf
+displayBooks(myLibrary);
 
-// addBookToLibrary("The Dark Tower", "Steven King", 579, true);
-// addBookToLibrary("The Wastelands", "Steven King", 324, false);
-
-// console.log(myLibrary[0].info());
-// console.log(myLibrary[1].info());
