@@ -109,6 +109,7 @@ function displayBooks(library){
 const myLibrary = [];
 addBookToLibrary("The Dark Tower", "Steven King", 579, true);
 addBookToLibrary("The Wastelands", "Steven King", 324, false);
+addBookToLibrary("Dark Matter", "Blake Crouch", 276, true)
 
 
 //Display books to the bookshelf
