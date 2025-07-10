@@ -26,11 +26,15 @@ bookContainer = document.querySelector(".book--container")
 ///A FUNCTION THAT DISPLAYS BOOK INFORMATION TO THE SCREEN
 function displayBooks(){
 
+    bookTitle = "Book Title";
+    bookAuthor = "Book Author";
+    bookPages = 69;
+    bookRead = true;
 
     for (let i = 0; i < 3; i++){
         //Create the book card
         book = document.createElement("div");
-        book.classList.add("book")
+        book.classList.add("book");
 
         //Add it to the book container
         bookContainer.appendChild(book);
@@ -51,7 +55,7 @@ function displayBooks(){
         //Create the title
         title = document.createElement("h2");
         title.classList.add("title");
-        title.textContent = "Stephen King";
+        title.textContent = bookTitle;
 
 
         //Create the Author p tag
@@ -61,7 +65,7 @@ function displayBooks(){
         authorName.textContent = "Author: ";
 
         author.appendChild(authorName);
-        author.appendChild(document.createTextNode("Author 1"));
+        author.appendChild(document.createTextNode(bookAuthor));
 
 
         //Create the pages p tag
@@ -71,7 +75,7 @@ function displayBooks(){
         pagesNum.textContent = "Pages: ";
 
         pages.appendChild(pagesNum);
-        pages.appendChild(document.createTextNode("757"));
+        pages.appendChild(document.createTextNode(bookPages));
 
 
         //Create the read p tag
@@ -81,7 +85,7 @@ function displayBooks(){
         readStatus.textContent = "Read: ";
 
         read.appendChild(readStatus);
-        read.appendChild(document.createTextNode("True"));
+        read.appendChild(document.createTextNode(bookRead));
 
 
 
