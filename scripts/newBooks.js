@@ -22,15 +22,22 @@ submit.addEventListener("click", (e) => {
 
     e.preventDefault();
 
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    if (form.checkValidity()){ //Checking if the form is valid
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+    
+    
+        addBookToLibrary(data.title, data.author, data.pages, data.read);
+    
+    
+        form.reset();
+        dialogue.close();
+        dialogue.classList.remove("show");
 
+    } else{
 
-    addBookToLibrary(data.title, data.author, data.pages, data.read);
-
-
-    form.reset();
-    dialogue.close();
-    dialogue.classList.remove("show");
+        form.reportValidity();
+        return;
+    }
 
 })
