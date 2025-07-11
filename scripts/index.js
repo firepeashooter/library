@@ -18,6 +18,7 @@ function addBookToLibrary(title, author, pages, read) {
 
     book = new Book(title, author, pages, read);
     myLibrary.push(book);
+    displayBooks(myLibrary); //IM A LITTLE IFFY ABOUT THIS
 }
 
 bookContainer = document.querySelector(".book--container")
@@ -25,6 +26,9 @@ bookContainer = document.querySelector(".book--container")
 
 ///A FUNCTION THAT DISPLAYS BOOK INFORMATION TO THE SCREEN
 function displayBooks(library){
+
+    //refresh the library
+    bookContainer.innerHTML = ''; //AND IM A LITTLE IFFY ABOUT THIS TOO...
 
     
 
@@ -112,6 +116,5 @@ addBookToLibrary("The Wastelands", "Steven King", 324, false);
 addBookToLibrary("Dark Matter", "Blake Crouch", 276, true)
 
 
-//Display books to the bookshelf
-displayBooks(myLibrary);
+
 

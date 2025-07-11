@@ -4,6 +4,7 @@ const close = document.querySelector(".close");
 const submit = document.querySelector(".submit");
 const form = document.getElementById("newbookform");
 
+
 newBook.addEventListener("click", () => {
     dialogue.showModal();
     dialogue.classList.add("show");
@@ -25,8 +26,7 @@ submit.addEventListener("click", (e) => {
     const data = Object.fromEntries(formData.entries());
 
 
-    console.log(data.title);
-    console.log(data.author);
+    addBookToLibrary(data.title, data.author, data.pages, data.read);
 
 
     form.reset();
