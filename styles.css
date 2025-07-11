@@ -1,7 +1,32 @@
+form{
+    flex:1;
+    padding:20px;
+}
+
+input{
+    border: none;
+    border: 2px solid #E5E7EB;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid 	#6495ED;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);;
+}
+
+
 fieldset{
     border:none;
     margin:0;
     padding:0;
+}
+
+legend{
+    margin-bottom: 10px;
 }
 
 
@@ -56,7 +81,6 @@ fieldset{
 .add--book{
     padding: 20px;
     font-size: 1.5rem;
-    border-radius: 20px;
     background-color: #EEE8AA;
 
     border: none;
@@ -77,6 +101,7 @@ fieldset{
     width:500px;
     height: 500px;
     border: none;
+    padding: 0;
 
     
 }
@@ -88,7 +113,37 @@ fieldset{
 }
 
 .dialog > *{
-    border: 2px solid black;
+    /* border: 2px solid black; */
+}
+
+.dialog--header{
+    display: flex;
+    justify-content: center;
+}
+
+.dialog--footer{
+    display: flex;
+    justify-content: center;
+}
+
+.close{
+    padding: 10px;
+    margin:20px;
+    font-size: 1.2rem;
+    background-color: #EEE8AA;
+
+    border: none;
+    outline: none;
+    box-shadow: 1px 2px 3px #2a2a5a; /* Slight dark shadow for 3D effect */
+    border-radius: 6px;
+}
+
+.close:hover{
+    background-color: #E6DA8A;
+}
+
+.close:active{
+    background-color: #D9C95F;
 }
 
 ::backdrop{
