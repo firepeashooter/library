@@ -55,9 +55,13 @@ function displayBooks(library){
         info = document.createElement("div");
         info.classList.add("info");
 
+        buttons = document.createElement("div");
+        buttons.classList.add("buttons");
+
         //Add layout divs
         book.appendChild(titleContainer);
         book.appendChild(info);
+        book.appendChild(buttons);
 
 
         //Create the title
@@ -95,14 +99,25 @@ function displayBooks(library){
         read.appendChild(readStatus);
         read.appendChild(document.createTextNode(bookRead));
 
+        
+        //Create the buttons
+        readButton = document.createElement("button");
+        readButton.textContent = "Toggle Read";
+        readButton.classList.add("toggle--read");
+
+        deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.classList.add("delete");
 
 
-
+        
         //Add the componenets
         titleContainer.appendChild(title);
         info.appendChild(author);
         info.appendChild(pages);
         info.appendChild(read);
+        buttons.appendChild(readButton);
+        buttons.appendChild(deleteButton);
 
     }
 
