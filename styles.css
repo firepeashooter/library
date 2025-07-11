@@ -9,7 +9,6 @@ input{
     padding: 5px;
     border-radius: 5px;
     margin-bottom: 10px;
-
 }
 
 input:focus{
@@ -17,7 +16,6 @@ input:focus{
     border: 2px solid 	#6495ED;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);;
 }
-
 
 fieldset{
     border:none;
@@ -85,7 +83,7 @@ legend{
 
     border: none;
     outline: none;
-    box-shadow: 1px 2px 3px #2a2a5a; /* Slight dark shadow for 3D effect */
+    box-shadow: 1px 2px 3px #2a2a5a;
     border-radius: 6px;
 }
 
@@ -102,18 +100,16 @@ legend{
     height: 500px;
     border: none;
     padding: 0;
+}
 
-    
+::backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dialog.show{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.dialog > *{
-    /* border: 2px solid black; */
 }
 
 .dialog--header{
@@ -144,10 +140,6 @@ legend{
 
 .close:active{
     background-color: #D9C95F;
-}
-
-::backdrop{
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .new--book--form{
