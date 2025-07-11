@@ -77,6 +77,18 @@ fieldset{
     width:500px;
     height: 500px;
     border: none;
+
+    
+}
+
+.dialog.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dialog > *{
+    border: 2px solid black;
 }
 
 ::backdrop{
