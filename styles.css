@@ -66,3 +66,13 @@
     background-color: #D9C95F;
 }
 
+.dialog{
+    width:500px;
+    height: 500px;
+    border: none;
+}
+
+::backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
