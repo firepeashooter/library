@@ -130,7 +130,7 @@ legend{
 
     border: none;
     outline: none;
-    box-shadow: 1px 2px 3px #2a2a5a; /* Slight dark shadow for 3D effect */
+    box-shadow: 1px 2px 3px #2a2a5a; 
     border-radius: 6px;
 }
 
@@ -139,6 +139,26 @@ legend{
 }
 
 .close:active{
+    background-color: #D9C95F;
+}
+
+.submit{
+    padding: 10px;
+    margin:20px;
+    font-size: 1.2rem;
+    background-color: #EEE8AA;
+
+    border: none;
+    outline: none;
+    box-shadow: 1px 2px 3px #2a2a5a; 
+    border-radius: 6px;
+}
+
+.submit:hover{
+    background-color: #E6DA8A;
+}
+
+.submit:active{
     background-color: #D9C95F;
 }
 
