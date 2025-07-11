@@ -11,6 +11,7 @@ newBook.addEventListener("click", () => {
 
 
 close.addEventListener("click", () => {
+    form.reset();
     dialogue.close();
     dialogue.classList.remove("show");
 
