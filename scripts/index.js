@@ -31,6 +31,7 @@ bookContainer = document.querySelector(".book--container");
 //Gets the bookid from the delete button pressed and then removes the entry from the array.
 bookContainer.addEventListener("click", (e) => {
 
+    //Grabs the associated book id with 
     const bookID = e.target.getAttribute("data-book-id");
 
     //If delete button is pressed
