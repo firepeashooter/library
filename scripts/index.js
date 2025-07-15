@@ -21,7 +21,29 @@ function addBookToLibrary(title, author, pages, read) {
     displayBooks(myLibrary); //IM A LITTLE IFFY ABOUT THIS
 }
 
-bookContainer = document.querySelector(".book--container")
+
+bookContainer = document.querySelector(".book--container");
+
+//Gets the bookid from the delete button pressed and then removes the entry from the array.
+bookContainer.addEventListener("click", (e) => {
+
+    if (e.target.classList.contains("delete")){
+        const bookID = e.target.getAttribute("data-book-id");
+
+        //Find the index of the book with the correct id
+
+            //Iterate through the array and if we found the item then delete it?
+        for (let i = 0; i < myLibrary.length; i++){
+
+            if (myLibrary[i].id == bookID){
+                //Remove it
+                myLibrary.splice(i, 1);
+                displayBooks(myLibrary);
+            }
+        }
+    }
+
+})
 
 
 ///A FUNCTION THAT DISPLAYS BOOK INFORMATION TO THE SCREEN
@@ -39,6 +61,7 @@ function displayBooks(library){
         bookAuthor = library[i].author;
         bookPages = library[i].pages;
         bookRead = library[i].read;
+        bookID = library[i].id
 
         //Create the book card
         book = document.createElement("div");
@@ -108,6 +131,8 @@ function displayBooks(library){
         deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.classList.add("delete");
+        //Associate delete button with book it so we can read it later when clicked
+        deleteButton.setAttribute("data-book-id", bookID);
 
 
         
