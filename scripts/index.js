@@ -14,6 +14,10 @@ function Book(title, author, pages, read){
     }
 }
 
+Book.prototype.toggleRead = function () {
+    this.read = !(this.read);
+}
+
 function addBookToLibrary(title, author, pages, read) {
 
     book = new Book(title, author, pages, read);
@@ -27,8 +31,10 @@ bookContainer = document.querySelector(".book--container");
 //Gets the bookid from the delete button pressed and then removes the entry from the array.
 bookContainer.addEventListener("click", (e) => {
 
+    const bookID = e.target.getAttribute("data-book-id");
+
+    //If delete button is pressed
     if (e.target.classList.contains("delete")){
-        const bookID = e.target.getAttribute("data-book-id");
 
         //Find the index of the book with the correct id
 
@@ -41,6 +47,20 @@ bookContainer.addEventListener("click", (e) => {
                 displayBooks(myLibrary);
             }
         }
+
+    //If the read button is pressed
+    } else if (e.target.classList.contains("toggle--read")){
+
+        for (let i = 0; i < myLibrary.length; i++){
+            
+            //Iterate through the library to find the book
+            if (myLibrary[i].id == bookID){
+                //toggle read
+                myLibrary[i].toggleRead();
+                displayBooks(myLibrary);
+            }
+        }
+
     }
 
 })
@@ -127,6 +147,8 @@ function displayBooks(library){
         readButton = document.createElement("button");
         readButton.textContent = "Toggle Read";
         readButton.classList.add("toggle--read");
+        //Associate read button with book so we can read it later when clicked
+        readButton.setAttribute("data-book-id", bookID);
 
         deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
