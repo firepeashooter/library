@@ -16,56 +16,67 @@
 
     </div>
 
-    <div class="book--container">
+    <div class="main">
+        
+        <div class="book--container">
+
+        </div>
+
+
+        <dialog class="dialog">
+
+            <div class="dialog--header">
+
+                <h2>New Book</h2>
+
+            </div>
+
+            <form id="newbookform" action="example.com/newbook" class="new--book--form">
+
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+        
+                <label for="author">Author</label>
+                <input type="text"id="author" name="author" required>
+                            
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages" required>
+
+                <fieldset>
+                    <legend>Have you read this book?</legend>
+
+                    <input type="radio" id="yes" name="read" value="true" required>
+                    <label for="yes">Yes</label>
+
+                    <input type="radio" id="no" name="read" value="false" required>
+                    <label for="no">No</label>
+
+                </fieldset>
+
+            </form>
+
+            <div class="dialog--footer">
+
+                <button type="submit" class="submit" form="newbookform">Submit</button>
+
+                <button class="close ">Close</button>
+
+            </div>
+
+        </dialog>
+
+
+        <div class="new--book">
+            <button class="add--book" type="button">New Book</button>
+        </div>
+
 
     </div>
 
-
-    <dialog class="dialog">
-
-        <div class="dialog--header">
-
-            <h2>New Book</h2>
-
-        </div>
-
-        <form id="newbookform" action="example.com/newbook" class="new--book--form">
-
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" required>
     
-            <label for="author">Author</label>
-            <input type="text"id="author" name="author" required>
-                        
-            <label for="pages">Pages</label>
-            <input type="number" id="pages" name="pages" required>
 
-            <fieldset>
-                <legend>Have you read this book?</legend>
-
-                <input type="radio" id="yes" name="read" value="true" required>
-                <label for="yes">Yes</label>
-
-                <input type="radio" id="no" name="read" value="false" required>
-                <label for="no">No</label>
-
-            </fieldset>
-
-        </form>
-
-        <div class="dialog--footer">
-
-            <button type="submit" class="submit" form="newbookform">Submit</button>
-
-            <button class="close ">Close</button>
-
-        </div>
-
-    </dialog>
-
-
-    <div class="new--book">
-        <button class="add--book" type="button">New Book</button>
+    <div class="footer">
+        <h4>by FirePea</h4>
     </div>
 
 
