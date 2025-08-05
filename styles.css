@@ -1,9 +1,31 @@
+:root{
+    --background:#abd1c6;
+    --bookBackground: #004643;
+    --bookHeading: #fffffe;
+    --mainHeading: #001e1d;
+    --bookParagraph: #abd1c6;
+}
+
+
 body{
     padding:0;
     margin: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: var(--background);
+}
+
+h1{
+    color:var(--mainHeading);
+}
+
+h2{
+    color:var(--bookHeading);
+}
+
+p{
+    color: var(--bookParagraph);
 }
 
 form{
@@ -49,6 +71,7 @@ legend{
 
 .subheading{
     font-weight: 700;
+    color: var(--bookHeading);
 }
 
 .header{
@@ -57,7 +80,6 @@ legend{
     flex:0.1;
     display:flex;
     justify-content: center;
-    background-color: lightblue;
 }
 
 .main{
@@ -72,7 +94,6 @@ legend{
     flex:0.1;
     display: flex;
     justify-content: center;
-    background-color: lightblue;
 
 }
 
@@ -82,7 +103,7 @@ legend{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: lightcoral;
+    background-color: var(--bookBackground);
     height: 300px;
     width: 300px;
     border-radius: 20px;
@@ -110,7 +131,7 @@ legend{
     display: grid;
     gap:10px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    border: 8px solid black;
+    /* border: 8px solid black; */
     
 }
 
@@ -124,7 +145,7 @@ legend{
 .add--book{
     padding: 20px;
     font-size: 1.5rem;
-    background-color: #EEE8AA;
+    background-color: #f9bc60;
 
     border: none;
     outline: none;
@@ -133,11 +154,11 @@ legend{
 }
 
 .add--book:hover{
-    background-color: #E6DA8A;
+    background-color: #fcd88f;
 }
 
 .add--book:active{
-    background-color: #D9C95F;
+    background-color: #d9a34f;
 }
 
 .dialog{
